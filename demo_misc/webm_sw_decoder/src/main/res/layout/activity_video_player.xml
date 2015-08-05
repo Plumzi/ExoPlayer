@@ -20,7 +20,8 @@
     android:orientation="vertical"
     android:keepScreenOn="true">
 
-  <com.google.android.exoplayer.AspectRatioFrameLayout android:id="@+id/video_frame"
+  <com.google.android.pzexoplayer.AspectRatioFrameLayout
+      android:id="@+id/video_frame"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_gravity="center">
@@ -31,13 +32,13 @@
         android:layout_height="match_parent"
         android:layout_gravity="center|center_vertical"/>
 
-    <com.google.android.exoplayer.ext.vp9.VpxVideoSurfaceView
+    <com.google.android.pzexoplayer.ext.vp9.VpxVideoSurfaceView
         android:id="@+id/vpx_surface_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center|center_vertical"/>
 
-  </com.google.android.exoplayer.AspectRatioFrameLayout>
+  </com.google.android.pzexoplayer.AspectRatioFrameLayout>
 
   <LinearLayout
       android:layout_width="wrap_content"

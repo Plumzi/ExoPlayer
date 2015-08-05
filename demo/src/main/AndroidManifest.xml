@@ -31,7 +31,7 @@
       android:largeHeap="true"
       android:allowBackup="false">
 
-    <activity android:name="com.google.android.exoplayer.demo.SampleChooserActivity"
+    <activity android:name="com.google.android.pzexoplayer.demo.SampleChooserActivity"
         android:configChanges="keyboardHidden"
         android:label="@string/application_name">
       <intent-filter>
@@ -40,7 +40,7 @@
       </intent-filter>
     </activity>
 
-    <activity android:name="com.google.android.exoplayer.demo.PlayerActivity"
+    <activity android:name="com.google.android.pzexoplayer.demo.PlayerActivity"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:label="@string/application_name"
         android:theme="@style/PlayerTheme"/>

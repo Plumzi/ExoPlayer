@@ -28,6 +28,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.exoplayer.demo.webm.R;
+
 /**
  * An activity for selecting from a number of samples.
  */

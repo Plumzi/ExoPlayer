@@ -15,6 +15,7 @@
  */
 package com.google.android.pzexoplayer.demo;
 
+import com.google.android.exoplayer.demo.R;
 import com.google.android.pzexoplayer.MediaCodecUtil;
 import com.google.android.pzexoplayer.MediaCodecUtil.DecoderQueryException;
 import com.google.android.pzexoplayer.demo.Samples.Sample;

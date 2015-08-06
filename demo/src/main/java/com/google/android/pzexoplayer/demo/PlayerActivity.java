@@ -15,6 +15,7 @@
  */
 package com.google.android.pzexoplayer.demo;
 
+import com.google.android.exoplayer.demo.R;
 import com.google.android.pzexoplayer.AspectRatioFrameLayout;
 import com.google.android.pzexoplayer.ExoPlayer;
 import com.google.android.pzexoplayer.audio.AudioCapabilities;

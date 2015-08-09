@@ -162,17 +162,17 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
   private static final int RENDERER_BUILDING_STATE_BUILT = 3;
 
   private final RendererBuilder rendererBuilder;
-  private final ExoPlayer player;
+  protected final ExoPlayer player;
   private final PlayerControl playerControl;
   private final Handler mainHandler;
-  private final CopyOnWriteArrayList<Listener> listeners;
+  protected final CopyOnWriteArrayList<Listener> listeners;
 
   private int rendererBuildingState;
   private int lastReportedPlaybackState;
   private boolean lastReportedPlayWhenReady;
 
   private Surface surface;
-  private TrackRenderer videoRenderer;
+  protected TrackRenderer videoRenderer;
   private CodecCounters codecCounters;
   private Format videoFormat;
   private int videoTrackToRestore;
@@ -307,7 +307,7 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
    *     element may be null if there do not exist tracks of the corresponding type.
    * @param bandwidthMeter Provides an estimate of the currently available bandwidth. May be null.
    */
-  /* package */ void onRenderers(String[][] trackNames,
+   public void onRenderers(String[][] trackNames,
       MultiTrackChunkSource[] multiTrackSources, TrackRenderer[] renderers,
       BandwidthMeter bandwidthMeter) {
     // Normalize the results.
@@ -351,7 +351,7 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
    *
    * @param e Describes the error.
    */
-  /* package */ void onRenderersError(Exception e) {
+  public void onRenderersError(Exception e) {
     if (internalErrorListener != null) {
       internalErrorListener.onRendererInitializationError(e);
     }
@@ -423,11 +423,11 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
     return player.getPlayWhenReady();
   }
 
-  /* package */ Looper getPlaybackLooper() {
+  public Looper getPlaybackLooper() {
     return player.getPlaybackLooper();
   }
 
-  /* package */ Handler getMainHandler() {
+  public Handler getMainHandler() {
     return mainHandler;
   }
 

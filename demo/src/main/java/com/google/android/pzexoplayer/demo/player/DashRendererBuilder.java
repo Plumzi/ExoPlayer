@@ -71,26 +71,26 @@ public class DashRendererBuilder implements RendererBuilder {
 
   private static final String TAG = "DashRendererBuilder";
 
-  private static final int BUFFER_SEGMENT_SIZE = 64 * 1024;
-  private static final int VIDEO_BUFFER_SEGMENTS = 200;
-  private static final int AUDIO_BUFFER_SEGMENTS = 60;
-  private static final int TEXT_BUFFER_SEGMENTS = 2;
-  private static final int LIVE_EDGE_LATENCY_MS = 30000;
+  protected static final int BUFFER_SEGMENT_SIZE = 64 * 1024;
+  protected static final int VIDEO_BUFFER_SEGMENTS = 200;
+  protected static final int AUDIO_BUFFER_SEGMENTS = 60;
+  protected static final int TEXT_BUFFER_SEGMENTS = 2;
+  protected static final int LIVE_EDGE_LATENCY_MS = 30000;
 
-  private static final int SECURITY_LEVEL_UNKNOWN = -1;
-  private static final int SECURITY_LEVEL_1 = 1;
-  private static final int SECURITY_LEVEL_3 = 3;
+  protected static final int SECURITY_LEVEL_UNKNOWN = -1;
+  protected static final int SECURITY_LEVEL_1 = 1;
+  protected static final int SECURITY_LEVEL_3 = 3;
 
   /**
    * Passthrough audio formats (encodings) in order of decreasing priority.
    */
-  private static final int[] PASSTHROUGH_ENCODINGS_PRIORITY =
+  protected static final int[] PASSTHROUGH_ENCODINGS_PRIORITY =
       new int[] {C.ENCODING_E_AC3, C.ENCODING_AC3};
   /**
    * Passthrough audio codecs corresponding to the encodings in
    * {@link #PASSTHROUGH_ENCODINGS_PRIORITY}.
    */
-  private static final String[] PASSTHROUGH_CODECS_PRIORITY =
+  protected static final String[] PASSTHROUGH_CODECS_PRIORITY =
       new String[] {"ec-3", "ac-3"};
 
   private final Context context;
@@ -99,7 +99,7 @@ public class DashRendererBuilder implements RendererBuilder {
   private final MediaDrmCallback drmCallback;
   private final AudioCapabilities audioCapabilities;
 
-  private AsyncRendererBuilder currentAsyncBuilder;
+  protected AsyncRendererBuilder currentAsyncBuilder;
 
   public DashRendererBuilder(Context context, String userAgent, String url,
       MediaDrmCallback drmCallback, AudioCapabilities audioCapabilities) {

@@ -116,7 +116,7 @@ public class MediaCodecVideoTrackRenderer extends MediaCodecTrackRenderer {
    */
   public static final int MSG_SET_SURFACE = 1;
 
-  private final FrameReleaseTimeHelper frameReleaseTimeHelper;
+  protected final FrameReleaseTimeHelper frameReleaseTimeHelper;
   private final EventListener eventListener;
   private final long allowedJoiningTimeUs;
   private final int videoScalingMode;
@@ -124,7 +124,7 @@ public class MediaCodecVideoTrackRenderer extends MediaCodecTrackRenderer {
 
   private Surface surface;
   private boolean reportedDrawnToSurface;
-  private boolean renderedFirstFrame;
+  protected boolean renderedFirstFrame;
   private long joiningDeadlineUs;
   private long droppedFrameAccumulationStartTimeMs;
   private int droppedFrameCount;
